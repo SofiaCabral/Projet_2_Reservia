@@ -1,0 +1,150 @@
+*{
+    list-style-type: none;
+    text-decoration: none;
+    padding: auto;
+}
+
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    /* background-color: grey; */
+}
+
+#page{
+    margin: 0 10px 0 10px;
+}
+/*HEADER*/
+
+/* #header{
+   
+} */
+#menu{
+    display: flex;
+    /* background-color: blueviolet; */
+    justify-content: space-between;
+    height: 40px;
+}
+#menu img{
+    height: 40px;
+}
+
+#menu p{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+#menu a{
+    color:#0065FC;
+}
+#navigation{
+    /* background-color: brown;  */
+    height: 30px;
+    margin-top:5px;
+}
+#navigation ul{
+    display: flex;
+    justify-content: space-around;
+}
+#navigation a{
+    color: black;
+}
+#navigation a:hover{
+   color:#0065FC;
+}
+
+#ConteneurBarreDeRecherche {
+    /* background-color:pink; */
+    margin-top: 15px;
+    
+}
+/* #phraseavantbarrrederecherche{
+
+} */
+#ConteneurBarreDeRecherche h1{
+    font-size: 20px;
+}
+
+#ConteneurBarreDeRecherche p{
+   margin-top: 2px;
+}
+#barrederecherche{
+    margin-top: 20px;
+}
+#barrederecherche input{
+   padding: 3px;
+   font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+
+}
+#barrederecherche button{
+    display: none;
+}
+#localisation{
+    margin-right: 10px;
+    background-color :#DEEBFF;
+    padding: 10px;
+}
+#iconeRecherche{
+    background-color: #0065FC;;
+    border-radius: 30%;
+    padding: 10px;
+    color:white;
+    margin-left: 10px;
+    
+}
+
+
+
+#Conteneurfiltres{
+    margin-top: 20px;
+}
+
+#Conteneurfiltres h1{
+    margin-bottom: 5px;
+}
+#Conteneurfiltres ul{
+    padding: 0;
+}
+
+#filtres ul{
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+#filtres li{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+}
+#filtres li a{
+   color: black;
+}
+
+#filtres i{
+    color:  #0065FC;
+    width: 40px;
+    margin-bottom: 40px;
+}
+
+
+#info{
+    margin-bottom: 20px;
+    display: flex;
+    /* background-color: green; */
+
+}
+
+#economiqueFamilial{
+    columns: 2;
+}
+
+#iconeinfo{
+    color:  #0065FC;
+    margin-right: 10px;
+}
+
+/* CONTENU DU SITE(avec les sections d'hebergements et activites et l'aside des plus populaires */
+#contenu img{
+        width: 100%;
+}

@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservia</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css"/>7
+    <!--Icone-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
-</head>
+    <!--Police raleway de google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;800&display=swap" rel="stylesheet">
 <body>
     <!--HEADER(avec logo,liens d'inscription, recherche de ville et filtres)-->
+    <div id="page">
     <header id="header">
         <div id="menu">
-            <a href="index.html"><img src="images/logo/Reservia@3x.png">
-            <p><a href="#">S'inscrire</a></p>
+            <a href="index.html"><img src="images/logo/Reservia@3x.png" id="logo">
+            <p><a href="#" >S'inscrire</a></p>
         </div>
         <nav id="navigation">
             <ul>
@@ -22,26 +26,36 @@
         </nav>
         <div id="ConteneurBarreDeRechercheFiltres">
             <div id="ConteneurBarreDeRecherche">
-                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-                <p>En plein centre ville ou en pleine nature</p>
-                <i class="fas fa-map-marker-alt"></i><input type="text" id="name" size="10">
-                <input type="submit"></input><i class="fas fa-search" id="p"></i>
+                <div id="phraseavantbarrrederecherche">
+                    <h1>Trouvez votre hébergement<br> pour des vacances de rêve</h1>
+                    <p>En plein centre ville ou en pleine nature</p>
+                </div>
+                <div id="barrederecherche">
+                    <i class="fas fa-map-marker-alt" id="localisation"></i><input type="search"  size="15" placeholder="Marseille, France">
+                    <i class="fas fa-search" id="iconeRecherche"></i>
+                    <button>Rechercher</button>
+                </div>
             <div id="Conteneurfiltres">
-                <ul>
+                <div id="filtres">
+                        <h1>Filtres</h1>   
                     <ul>
-                        <li>Filtres</li>
+                        <div id="economiqueFamilial">
+                            <li><a href="#"><i class="fas fa-money-bill-wave"></i>Economique</a></li>
+                            <li><a href="#"><i class="fas fa-child"></i>Familial</a></li>
+                        </div>    
+                            <li><a href="#"><i class="fas fa-heart"></i>Romantique</a></li>
+                            <li><a href="#"><i class="fas fa-dog"></i>Animaux autorisés</a></li>
                     </ul>
-                        <li><a href="#"><i class="fas fa-money-bill-wave"></i>Economique</a></li>
-                        <li><a href="#"><i class="fas fa-child"></i>Familial</a></li>
-                        <li><a href="#"><i class="fas fa-heart"></i>Romantique</a></li>
-                        <li><a href="#"><i class="fas fa-dog"></i>Animaux autorisés</a></li>
-                </ul>
-                <p><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+                </div>
+                <div id="info">
+                    <i class="fas fa-info" id="iconeinfo"></i>
+                    <p>Plus de 500 logements sont disponibles <br>dans cette ville</p>
+                </div>
             </div>
         </div>
     </header>
     <!--CONTENU DU SITE(avec les sections d'hebergements et activites et l'aside des plus populaires -->
-    <main id="page">
+    <main id="contenu">
         <div id="conteneurHebergementsEtPopulaires">
     <!--LES PLUS POPULAIRES-->
            <aside id="aside">
@@ -201,7 +215,6 @@
                 </div>        
         </footer>
     </main>
-  
-    
+</div>
 </body>
 </html>
