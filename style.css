@@ -8,7 +8,7 @@ body {
     font-weight: 300;
 }
 
-.blueStar {
+.etoileBleu {
     margin: 5px 0 10px 0;
     color: #0065FC;
 }
@@ -110,7 +110,7 @@ body {
     border: none;
 }
 
-#searchCity {
+#rechercheDeVille {
     display: none;
     outline: none;
 }
@@ -520,7 +520,7 @@ body {
         display: none;
     }
     
-    #searchCity {
+    #rechercheDeVille {
         display: block;
         background-color: #0065FC;
         border-radius: 0 15px 15px 0;
@@ -749,7 +749,7 @@ body {
         display: none;
     }
     
-    #searchCity {
+    #rechercheDeVille {
         display: block;
         background-color: #0065FC;
         border-radius: 0 15px 15px 0;
