@@ -1,11 +1,23 @@
-* {
+ul {
     list-style-type: none;
+}
+
+a {
     text-decoration: none;
 }
 
 body {
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
+    margin: 0;
+}
+
+#page {
+    margin: 10px 10px 0 10px;
+}
+
+.euro {
+    font-weight: bold;
 }
 
 .etoileBleu {
@@ -54,6 +66,10 @@ body {
     border-bottom: 3px solid #F2F2F2;
 }
 
+#navigation li:hover {
+    border-bottom: 3px solid #0065FC;
+}
+
 #navigation a {
     color: black;
 }
@@ -94,12 +110,12 @@ body {
 
 #barrederecherche {
     margin-top: 20px;
-    border-top: 1px solid #F2F2F2;
-    border-bottom: 1px solid #F2F2F2;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 200px;
 }
 
 #barrederecherche input {
@@ -117,14 +133,14 @@ body {
 
 #localisation {
     margin-right: 10px;
-    background-color: #F2F2F2;
+    background-color: gray;
     padding: 10px 15px 0 15px;
     border-radius: 15px 5px 5px 15px;
 }
 
 #iconeRecherche {
     background-color: #0065FC;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 10px;
     color: white;
     margin-left: 10px;
@@ -215,6 +231,13 @@ body {
     margin: auto;
 }
 
+#conteneurTitrePopulaires h2 {
+    margin: 20px 0 0 0;
+    color: black;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
 #conteneurTitrePopulaires i {
     font-size: 22px;
 }
@@ -266,7 +289,7 @@ body {
     margin: 0;
 }
 
-.descriptionPopulaires h2 {
+.descriptionPopulaires h3 {
     margin: 0;
     color: black;
     font-size: 14px;
@@ -306,14 +329,14 @@ body {
     margin-bottom: 10px;
     background-color: white;
     border-radius: 15px 15px;
-    box-shadow: 8px 4px 8px #aaa;
+    box-shadow: 8px 4px 8px silver;
 }
 
 .articlesHebergements {
     margin-bottom: 10px;
     background-color: white;
     border-radius: 15px 15px;
-    box-shadow: 8px 4px 8px #aaa;
+    box-shadow: 8px 4px 8px silver;
     padding: 5px 5px 0 5px;
 }
 
@@ -386,7 +409,7 @@ body {
     margin: 0;
 }
 
-.descriptionHebergements h2 {
+.descriptionHebergements h3 {
     color: black;
     font-size: 14px;
     margin-bottom: 5px;
@@ -434,7 +457,7 @@ body {
     margin-bottom: 10px;
     background-color: white;
     border-radius: 15px 15px;
-    box-shadow: 8px 4px 8px #aaa;
+    box-shadow: 8px 4px 8px silver;
 }
 
 #imageActivites1 {
@@ -448,7 +471,7 @@ body {
 }
 
 #imageActivites2 {
-    background-image: url('images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpG');
+    background-image: url('images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg');
     width: 100%;
     height: 120px;
     display: block;
@@ -497,7 +520,7 @@ body {
     border-radius: 15px 15px 0 0;
 }
 
-.desccriptionActivites h2 {
+.desccriptionActivites h3 {
     padding-bottom: 20px;
     margin-left: 20px;
     width: 100%;
@@ -512,11 +535,12 @@ body {
 
 #footer {
     margin-top: 25px;
+    padding-bottom: 10px;
     background-color: #F2F2F2;
 }
 
 .titreListeFooter {
-    padding: 0;
+    padding: 15px 0 0 0;
 }
 
 .ConteneurMenuFooter ul>ul {
@@ -534,15 +558,19 @@ body {
 
 /*ADAPTATION PC */
 
-@media all and (min-width: 700px) and (max-width:1461px) {
+@media all and (min-width: 600px) and (max-width:849px) {
+    /*tablette*/
+}
+
+@media all and (min-width: 850px) and (max-width:1160px) {
     /*HEADER*/
+    #page {
+        margin: 30px;
+    }
     #header {
         display: flex;
         justify-content: space-between;
         width: 90%;
-    }
-    #barrederecherche {
-        width: 40%;
     }
     #filtres a:hover {
         color: #0065FC;
@@ -562,6 +590,10 @@ body {
     }
     #navigation li:hover {
         border-top: 1px solid#0065FC;
+    }
+    #navigation #inscription {
+        top: 30px;
+        right: 30px;
     }
     /*Barre de recherche*/
     #iconeRecherche {
@@ -713,15 +745,15 @@ body {
     }
 }
 
-@media all and (min-width: 1461px) {
+@media all and (min-width: 1161px) {
     /*HEADER*/
+    #page {
+        margin: 30px;
+    }
     #header {
         display: flex;
         justify-content: space-between;
         width: 95%;
-    }
-    #barrederecherche {
-        width: 40%;
     }
     #filtres a:hover {
         color: #0065FC;
@@ -742,7 +774,14 @@ body {
     #navigation li:hover {
         border-top: 1px solid#0065FC;
     }
+    #navigation #inscription {
+        top: 30px;
+        right: 30px;
+    }
     /*Barre de recherche*/
+    #barrederecherche {
+        width: 200px;
+    }
     #iconeRecherche {
         display: none;
     }
@@ -784,7 +823,7 @@ body {
     }
     .descriptionPopulaires p {
         font-size: 14px;
-        padding: 10px 0 50px 0;
+        padding: 10px 0 85px 0;
     }
     #imagePopulaires1 {
         width: 80%;
@@ -799,15 +838,14 @@ body {
     .sectionHebergements {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         margin: 0;
         background-color: #F2F2F2;
         margin-right: 20px;
         padding-right: 20px;
     }
     .conteneurTitreHebergements {
-        margin-bottom: 0;
-        margin-top: 0;
-        width: 95%;
+        width: 80%;
         margin: auto;
     }
     .conteneurTitreHebergements h2 {
@@ -815,7 +853,7 @@ body {
     }
     .articlesHebergements {
         margin: 0;
-        width: 30%;
+        width: 25%;
         margin-left: 20px;
         margin-bottom: 20px;
     }
@@ -836,6 +874,10 @@ body {
     }
     #imageHebergements6 {
         height: 200px;
+    }
+    #ConteneurAfficherPlus {
+        width: 80%;
+        margin: auto;
     }
     /*  <!--ACTIVITES-->*/
     .sectionActivites {
