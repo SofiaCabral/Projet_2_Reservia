@@ -13,7 +13,7 @@ body {
 }
 
 #page {
-    margin: 10px 10px 0 10px;
+    margin: 0 10px 0 10px;
 }
 
 .euro {
@@ -21,12 +21,10 @@ body {
 }
 
 .etoileBleu {
-    margin: 5px 0 10px 0;
     color: #0065FC;
 }
 
 .grayStar {
-    margin: 5px 0 10px 0;
     color: #F2F2F2;
 }
 
@@ -34,6 +32,7 @@ body {
 /*HEADER*/
 
 #header {
+    margin: 10px;
     width: 100%;
 }
 
@@ -110,20 +109,19 @@ body {
 
 #barrederecherche {
     margin-top: 20px;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
     border-radius: 15px;
     display: flex;
-    justify-content: space-between;
-    width: 200px;
+    width: 90%;
+    margin: auto;
 }
 
 #barrederecherche input {
-    padding: 3px;
+    padding-left: 10px;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 16px;
-    border: none;
+    border: 1px solid #F2F2F2;
+    z-index: 1;
 }
 
 #rechercheDeVille {
@@ -132,18 +130,20 @@ body {
 }
 
 #localisation {
-    margin-right: 10px;
-    background-color: gray;
+    margin-right: -5px;
+    background-color: #F2F2F2;
     padding: 10px 15px 0 15px;
     border-radius: 15px 5px 5px 15px;
+    z-index: 2;
 }
 
 #iconeRecherche {
     background-color: #0065FC;
-    border-radius: 10px;
+    border-radius: 9px;
     padding: 10px;
     color: white;
-    margin-left: 10px;
+    margin-left: -10px;
+    z-index: 2;
 }
 
 
@@ -229,13 +229,14 @@ body {
     align-items: center;
     width: 90%;
     margin: auto;
+    padding-top: 20px;
 }
 
 #conteneurTitrePopulaires h2 {
     margin: 20px 0 0 0;
     color: black;
     font-size: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 #conteneurTitrePopulaires i {
@@ -249,6 +250,7 @@ body {
 .articlesPopulaires {
     background-color: white;
     width: 90%;
+    height: 110px;
     margin: auto;
     display: flex;
     margin-bottom: 10px;
@@ -299,7 +301,10 @@ body {
     margin-top: 5px;
     color: black;
     font-size: 12px;
-    margin-bottom: 25px;
+}
+
+.etoiles {
+    margin-top: 40px;
 }
 
 
@@ -313,23 +318,11 @@ body {
 .conteneurTitreHebergements {
     width: 90%;
     margin: auto;
+    padding-top: 20px;
 }
 
 .conteneurTitreHebergements h2 {
     font-size: 20px;
-}
-
-#toutarticlesActivites {
-    padding-top: 15px;
-    width: 90%;
-    margin: auto;
-}
-
-.articlesActivitesGRAND {
-    margin-bottom: 10px;
-    background-color: white;
-    border-radius: 15px 15px;
-    box-shadow: 8px 4px 8px silver;
 }
 
 .articlesHebergements {
@@ -429,6 +422,7 @@ body {
 
 #afficherPlus {
     font-size: 20px;
+    padding-bottom: 20px;
 }
 
 #afficherPlus a {
@@ -445,12 +439,26 @@ body {
 
 .conteneurTitreActivites {
     width: 100%;
+    padding-bottom: 10px;
+}
+
+#toutarticlesActivites {
+    padding-top: 15px;
+    width: 90%;
+    margin: auto;
 }
 
 .conteneurTitreActivites h2 {
     font-size: 20px;
     width: 90%;
     margin: auto;
+}
+
+.articlesActivitesGRAND {
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 15px 15px;
+    box-shadow: 8px 4px 8px silver;
 }
 
 .articlesActivites {
@@ -524,6 +532,7 @@ body {
     padding-bottom: 20px;
     margin-left: 20px;
     width: 100%;
+    font-size: 14px;
 }
 
 #toutarticlesActivites a {
@@ -565,12 +574,13 @@ body {
 @media all and (min-width: 850px) and (max-width:1160px) {
     /*HEADER*/
     #page {
-        margin: 30px;
+        margin: 0 30px 0 30px;
     }
     #header {
         display: flex;
         justify-content: space-between;
         width: 90%;
+        padding-top: 30px
     }
     #filtres a:hover {
         color: #0065FC;
@@ -590,12 +600,19 @@ body {
     }
     #navigation li:hover {
         border-top: 1px solid#0065FC;
+        border-bottom: none;
+        padding-top: 52px;
+        margin-top: -40px;
     }
     #navigation #inscription {
-        top: 30px;
+        top: 40px;
         right: 30px;
     }
     /*Barre de recherche*/
+    #barrederecherche {
+        margin: 0;
+        width: 200px;
+    }
     #iconeRecherche {
         display: none;
     }
@@ -605,9 +622,14 @@ body {
         border-radius: 0 15px 15px 0;
         padding: 10px;
         color: white;
-        margin-left: 10px;
+        margin-left: -10px;
         cursor: pointer;
         border: none;
+        z-index: 2;
+    }
+    /*Filtres*/
+    #filtres {
+        display: flex;
     }
     /* <!--LES PLUS POPULAIRES--> */
     #conteneurHebergementsEtPopulaires {
@@ -697,14 +719,19 @@ body {
         display: flex;
         margin: 0;
         width: 100%;
+        height: 400px;
+        /* background-color: coral; */
     }
     #toutarticlesActivites h2 {
-        font-size: 12px;
+        /* font-size: 12px; */
         margin-left: 5px;
     }
     .articlesActivitesGRAND {
-        width: 25%;
-        height: 400px;
+        width: 200px;
+        /* background-color: crimson; */
+    }
+    .articlesActivitesGRAND h3 {
+        padding-bottom: 10px;
     }
     .conteneurArticlesActivitesPETIT {
         width: 35%;
@@ -748,12 +775,13 @@ body {
 @media all and (min-width: 1161px) {
     /*HEADER*/
     #page {
-        margin: 30px;
+        margin: 0 30px 0 30px;
     }
     #header {
         display: flex;
         justify-content: space-between;
         width: 95%;
+        padding-top: 30px;
     }
     #filtres a:hover {
         color: #0065FC;
@@ -773,13 +801,17 @@ body {
     }
     #navigation li:hover {
         border-top: 1px solid#0065FC;
+        border-bottom: none;
+        padding-top: 52px;
+        margin-top: -40px;
     }
     #navigation #inscription {
-        top: 30px;
+        top: 40px;
         right: 30px;
     }
     /*Barre de recherche*/
     #barrederecherche {
+        margin: 0;
         width: 200px;
     }
     #iconeRecherche {
@@ -791,10 +823,17 @@ body {
         border-radius: 0 15px 15px 0;
         padding: 10px;
         color: white;
-        margin-left: 10px;
+        margin-left: -10px;
         cursor: pointer;
         border: none;
-        outline: none;
+        z-index: 2;
+    }
+    #localisation {
+        padding: 15px 15px 15px 15px;
+    }
+    /*Filtres*/
+    #filtres {
+        display: flex;
     }
     /* <!--LES PLUS POPULAIRES--> */
     #conteneurHebergementsEtPopulaires {
@@ -804,14 +843,17 @@ body {
     #aside {
         order: 2;
         width: 50%;
+        border-radius: 15px 15px;
     }
     #conteneurTitrePopulaires {
         width: 80%;
         margin: auto;
+        padding-bottom: 20px;
     }
     .articlesPopulaires {
         height: 200px;
         width: 80%;
+        height: 150px;
         margin-bottom: 20px;
     }
     .descriptionPopulaires {
@@ -823,7 +865,7 @@ body {
     }
     .descriptionPopulaires p {
         font-size: 14px;
-        padding: 10px 0 85px 0;
+        padding: 10px 0 50px 0;
     }
     #imagePopulaires1 {
         width: 80%;
@@ -843,46 +885,50 @@ body {
         background-color: #F2F2F2;
         margin-right: 20px;
         padding-right: 20px;
+        border-radius: 15px 15px;
     }
     .conteneurTitreHebergements {
         width: 80%;
         margin: auto;
+        padding-bottom: 20px;
     }
     .conteneurTitreHebergements h2 {
         margin-bottom: 0;
     }
     .articlesHebergements {
-        margin: 0;
+        margin-bottom: 20px;
         width: 25%;
         margin-left: 20px;
-        margin-bottom: 20px;
+        height: 220px;
     }
     #imageHebergements1 {
-        height: 200px;
+        height: 130px;
     }
     #imageHebergements2 {
-        height: 200px;
+        height: 130px;
     }
     #imageHebergements3 {
-        height: 200px;
+        height: 130px;
     }
     #imageHebergements4 {
-        height: 200px;
+        height: 130px;
     }
     #imageHebergements5 {
-        height: 200px;
+        height: 130px;
     }
     #imageHebergements6 {
-        height: 200px;
+        height: 130px;
     }
     #ConteneurAfficherPlus {
         width: 80%;
         margin: auto;
+        margin-top: 0;
     }
     /*  <!--ACTIVITES-->*/
     .sectionActivites {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         margin: 0;
         width: 100%;
     }
@@ -894,41 +940,41 @@ body {
         display: flex;
         margin: 0;
         width: 100%;
+        height: 500px;
+        background-color: chocolate;
     }
     .articlesActivitesGRAND {
         width: 25%;
-        height: 700px;
-        /**/
-        ;
+        height: 500px;
     }
     .conteneurArticlesActivitesPETIT {
-        width: 25%;
-        height: 700px;
+        width: 440px;
+        height: 500px;
     }
     .articlesActivites {
-        margin: 0;
         margin-left: 40px;
         margin-right: 40px;
+        margin-bottom: 40px;
     }
     #imageActivites1 {
         height: 90%;
         width: 100%;
     }
     #imageActivites2 {
-        height: 300px;
+        height: 210px;
     }
     #imageActivites3 {
-        height: 260px;
+        height: 150px;
     }
     #imageActivites4 {
         height: 90%;
         width: 100%;
     }
     #imageActivites5 {
-        height: 260px;
+        height: 150px;
     }
     #imageActivites6 {
-        height: 300px;
+        height: 200px;
     }
     #footer {
         display: flex;
