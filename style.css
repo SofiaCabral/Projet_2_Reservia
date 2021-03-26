@@ -124,6 +124,7 @@
         
         #rechercheDeVille {
             display: none;
+            outline: none;
         }
         
         #localisation {
@@ -209,6 +210,10 @@
             padding: 5px 10px 0 10px;
             font-size: 12px;
             height: 19px;
+        }
+        
+        #filtres a:active {
+            color: #0065FC;
         }
         /* CONTENU DU SITE(avec les sections d'hebergements et activites et l'aside des plus populaires */
         
